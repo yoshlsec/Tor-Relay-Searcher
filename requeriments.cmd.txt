@@ -1,0 +1,4 @@
+pycountry==24.6.1
+typing==3.7.4.3
+argparse==1.4.0
+requests==2.31.0
