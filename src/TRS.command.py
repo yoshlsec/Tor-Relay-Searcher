@@ -138,24 +138,6 @@ class searchRelay():
             instance.relays = filteredRelays
             filteredRelays = list(instance.filterCountry(country))
 
-        if first_seen:
-            instance.relays = filteredRelays
-            filteredRelays = list(instance.filterFirstSeen(
-                first_seen.get('first_seen', ''),
-                first_seen.get('preciseStamp', None),
-                first_seen.get('greaterStamp', None),
-                first_seen.get('lessStamp', None)
-            ))
-
-        if last_seen:
-            instance.relays = filteredRelays
-            filteredRelays = list(instance.filterLastSeen(
-                last_seen.get('last_seen', ''),
-                last_seen.get('preciseStamp', None),
-                last_seen.get('greaterStamp', None),
-                last_seen.get('lessStamp', None)
-            ))
-
         return filteredRelays
 
 parser = argparse.ArgumentParser(description='Tor relay finder by relay characteristics')
